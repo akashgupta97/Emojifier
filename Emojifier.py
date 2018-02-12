@@ -8,3 +8,5 @@ import matplotlib.pyplot as plt
 
 X_train, Y_train = read_csv('data/train_emoji.csv')
 X_test, Y_test = read_csv('data/tesss.csv')
+
+maxLen = len(max(X_train, key=len).split())
