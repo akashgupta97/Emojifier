@@ -14,3 +14,9 @@ maxLen = len(max(X_train, key=len).split())
 
 index = 1
 print(X_train[index], label_to_emoji(Y_train[index]))
+
+
+Y_oh_train = convert_to_one_hot(Y_train, C = 5)
+Y_oh_test = convert_to_one_hot(Y_test, C = 5)
+
+
