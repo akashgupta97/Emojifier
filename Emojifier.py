@@ -20,3 +20,7 @@ Y_oh_train = convert_to_one_hot(Y_train, C = 5)
 Y_oh_test = convert_to_one_hot(Y_test, C = 5)
 
 
+index = 50
+print(Y_train[index], "is converted into one hot", Y_oh_train[index])
+
+
