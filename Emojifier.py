@@ -24,3 +24,4 @@ index = 50
 print(Y_train[index], "is converted into one hot", Y_oh_train[index])
 
 
+word_to_index, index_to_word, word_to_vec_map = read_glove_vecs('data/glove.6B.50d.txt')
