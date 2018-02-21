@@ -25,3 +25,10 @@ print(Y_train[index], "is converted into one hot", Y_oh_train[index])
 
 
 word_to_index, index_to_word, word_to_vec_map = read_glove_vecs('data/glove.6B.50d.txt')
+
+
+word = "cucumber"
+index = 289846
+print("the index of", word, "in the vocabulary is", word_to_index[word])
+print("the", str(index) + "th word in the vocabulary is", index_to_word[index])
+
