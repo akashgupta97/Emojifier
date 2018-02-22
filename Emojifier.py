@@ -32,3 +32,20 @@ index = 289846
 print("the index of", word, "in the vocabulary is", word_to_index[word])
 print("the", str(index) + "th word in the vocabulary is", index_to_word[index])
 
+
+# GRADED FUNCTION: sentence_to_avg
+
+def sentence_to_avg(sentence, word_to_vec_map):
+    """
+    Converts a sentence (string) into a list of words (strings). Extracts the GloVe representation of each word
+    and averages its value into a single vector encoding the meaning of the sentence.
+
+    Arguments:
+    sentence -- string, one training example from X
+    word_to_vec_map -- dictionary mapping every word in a vocabulary into its 50-dimensional vector representation
+
+    Returns:
+    avg -- average vector encoding information about the sentence, numpy-array of shape (50,)
+    """
+
+    
