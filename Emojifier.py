@@ -48,4 +48,9 @@ def sentence_to_avg(sentence, word_to_vec_map):
     avg -- average vector encoding information about the sentence, numpy-array of shape (50,)
     """
 
-    
+    ### START CODE HERE ###
+    # Step 1: Split sentence into list of lower case words (≈ 1 line)
+    words = (sentence.lower()).split()
+
+    # Initialize the average word vector, should have the same shape as your word vectors.
+    avg = np.zeros((50,))
