@@ -54,3 +54,12 @@ def sentence_to_avg(sentence, word_to_vec_map):
 
     # Initialize the average word vector, should have the same shape as your word vectors.
     avg = np.zeros((50,))
+
+    # Step 2: average the word vectors. You can loop over the words in the list "words".
+    for w in words:
+        avg += word_to_vec_map[w]
+    avg = avg / len(words)
+
+    ### END CODE HERE ###
+
+    return avg
