@@ -63,3 +63,7 @@ def sentence_to_avg(sentence, word_to_vec_map):
     ### END CODE HERE ###
 
     return avg
+
+
+avg = sentence_to_avg("Morrocan couscous is my favorite dish", word_to_vec_map)
+print("avg = ", avg)
