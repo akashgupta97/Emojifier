@@ -67,3 +67,25 @@ def sentence_to_avg(sentence, word_to_vec_map):
 
 avg = sentence_to_avg("Morrocan couscous is my favorite dish", word_to_vec_map)
 print("avg = ", avg)
+
+
+# GRADED FUNCTION: model
+
+def model(X, Y, word_to_vec_map, learning_rate=0.01, num_iterations=400):
+    """
+    Model to train word vector representations in numpy.
+
+    Arguments:
+    X -- input data, numpy array of sentences as strings, of shape (m, 1)
+    Y -- labels, numpy array of integers between 0 and 7, numpy-array of shape (m, 1)
+    word_to_vec_map -- dictionary mapping every word in a vocabulary into its 50-dimensional vector representation
+    learning_rate -- learning_rate for the stochastic gradient descent algorithm
+    num_iterations -- number of iterations
+
+    Returns:
+    pred -- vector of predictions, numpy-array of shape (m, 1)
+    W -- weight matrix of the softmax layer, of shape (n_y, n_h)
+    b -- bias of the softmax layer, of shape (n_y,)
+    """
+
+    
