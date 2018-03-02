@@ -88,4 +88,16 @@ def model(X, Y, word_to_vec_map, learning_rate=0.01, num_iterations=400):
     b -- bias of the softmax layer, of shape (n_y,)
     """
 
-    
+    np.random.seed(1)
+
+    # Define number of training examples
+    m = Y.shape[0]  # number of training examples
+    n_y = 5  # number of classes
+    n_h = 50  # dimensions of the GloVe vectors
+
+    # Initialize parameters using Xavier initialization
+    W = np.random.randn(n_y, n_h) / np.sqrt(n_h)
+    b = np.zeros((n_y,))
+
+    # Convert Y to Y_onehot with n_y classes
+    Y_oh = convert_to_one_hot(Y, C=n_y)
