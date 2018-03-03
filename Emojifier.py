@@ -101,3 +101,15 @@ def model(X, Y, word_to_vec_map, learning_rate=0.01, num_iterations=400):
 
     # Convert Y to Y_onehot with n_y classes
     Y_oh = convert_to_one_hot(Y, C=n_y)
+
+    # Optimization loop
+    for t in range(num_iterations):  # Loop over the number of iterations
+        for i in range(m):  # Loop over the training examples
+
+            ### START CODE HERE ### (≈ 4 lines of code)
+            # Average the word vectors of the words from the i'th training example
+            avg = sentence_to_avg(X[i], word_to_vec_map)
+
+            # Forward propagate the avg through the softmax layer
+            z = np.dot(W, avg) + b
+            a = softmax(z)
