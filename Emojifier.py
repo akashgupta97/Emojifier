@@ -113,3 +113,6 @@ def model(X, Y, word_to_vec_map, learning_rate=0.01, num_iterations=400):
             # Forward propagate the avg through the softmax layer
             z = np.dot(W, avg) + b
             a = softmax(z)
+
+
+            
