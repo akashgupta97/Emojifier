@@ -18,3 +18,19 @@ def cosine_similarity(u, v):
     Returns:
         cosine_similarity -- the cosine similarity between u and v defined by the formula above.
     """
+
+    distance = 0.0
+
+    ### START CODE HERE ###
+    # Compute the dot product between u and v (≈1 line)
+    dot = np.dot(u, v)
+    # Compute the L2 norm of u (≈1 line)
+    norm_u = np.sqrt(np.sum(u ** 2))
+
+    # Compute the L2 norm of v (≈1 line)
+    norm_v = np.sqrt(np.sum(v ** 2))
+    # Compute the cosine similarity defined by formula (1) (≈1 line)
+    cosine_similarity = dot / np.dot(norm_u, norm_v)
+    ### END CODE HERE ###
+
+    return cosine_similarity
