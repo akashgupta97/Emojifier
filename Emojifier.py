@@ -114,5 +114,15 @@ def model(X, Y, word_to_vec_map, learning_rate=0.01, num_iterations=400):
             z = np.dot(W, avg) + b
             a = softmax(z)
 
+            # Compute cost using the i'th training label's one hot representation and "A" (the output of the softmax)
+            cost = - np.sum(Y_oh[i] * np.log(a))
+            ### END CODE HERE ###
 
-            
+            # Compute gradients
+            dz = a - Y_oh[i]
+            dW = np.dot(dz.reshape(n_y, 1), avg.reshape(1, n_h))
+            db = dz
+
+            # Update parameters with Stochastic Gradient Descent
+            W = W - learning_rate * dW
+            b = b - learning_rate * db
