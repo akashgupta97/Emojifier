@@ -34,3 +34,13 @@ def cosine_similarity(u, v):
     ### END CODE HERE ###
 
     return cosine_similarity
+
+
+father = word_to_vec_map["father"]
+mother = word_to_vec_map["mother"]
+ball = word_to_vec_map["ball"]
+crocodile = word_to_vec_map["crocodile"]
+france = word_to_vec_map["france"]
+italy = word_to_vec_map["italy"]
+paris = word_to_vec_map["paris"]
+rome = word_to_vec_map["rome"]
