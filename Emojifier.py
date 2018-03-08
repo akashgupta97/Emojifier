@@ -126,3 +126,9 @@ def model(X, Y, word_to_vec_map, learning_rate=0.01, num_iterations=400):
             # Update parameters with Stochastic Gradient Descent
             W = W - learning_rate * dW
             b = b - learning_rate * db
+
+            if t % 100 == 0:
+                print("Epoch: " + str(t) + " --- cost = " + str(cost))
+                pred = predict(X, Y, W, b, word_to_vec_map)
+
+            return pred, W, b
