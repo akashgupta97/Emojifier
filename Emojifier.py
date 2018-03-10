@@ -132,3 +132,12 @@ def model(X, Y, word_to_vec_map, learning_rate=0.01, num_iterations=400):
                 pred = predict(X, Y, W, b, word_to_vec_map)
 
             return pred, W, b
+
+        print(X_train.shape)
+        print(Y_train.shape)
+        print(np.eye(5)[Y_train.reshape(-1)].shape)
+        print(X_train[0])
+        print(type(X_train))
+        Y = np.asarray([5, 0, 0, 5, 4, 4, 4, 6, 6, 4, 1, 1, 5, 6, 6, 3, 6, 3, 4, 4])
+        print(Y.shape)
+    
