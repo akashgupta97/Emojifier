@@ -48,3 +48,11 @@ rome = word_to_vec_map["rome"]
 print("cosine_similarity(father, mother) = ", cosine_similarity(father, mother))
 print("cosine_similarity(ball, crocodile) = ",cosine_similarity(ball, crocodile))
 print("cosine_similarity(france - paris, rome - italy) = ",cosine_similarity(france - paris, rome - italy))
+
+
+'''
+
+cosine_similarity(father, mother) =  0.890903844289
+cosine_similarity(ball, crocodile) =  0.274392462614
+cosine_similarity(france - paris, rome - italy) =  -0.675147930817
+'''
