@@ -55,4 +55,22 @@ print("cosine_similarity(france - paris, rome - italy) = ",cosine_similarity(fra
 cosine_similarity(father, mother) =  0.890903844289
 cosine_similarity(ball, crocodile) =  0.274392462614
 cosine_similarity(france - paris, rome - italy) =  -0.675147930817
+
 '''
+
+
+# GRADED FUNCTION: complete_analogy
+
+def complete_analogy(word_a, word_b, word_c, word_to_vec_map):
+    """
+    Performs the word analogy task as explained above: a is to b as c is to ____.
+
+    Arguments:
+    word_a -- a word, string
+    word_b -- a word, string
+    word_c -- a word, string
+    word_to_vec_map -- dictionary that maps words to their corresponding vectors.
+
+    Returns:
+    best_word --  the word such that v_b - v_a is close to v_best_word - v_c, as measured by cosine similarity
+    """
