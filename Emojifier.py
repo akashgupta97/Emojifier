@@ -154,3 +154,6 @@ def model(X, Y, word_to_vec_map, learning_rate=0.01, num_iterations=400):
     print(X.shape)
     print(np.eye(5)[Y_train.reshape(-1)].shape)
     print(type(X_train))
+
+    predpred,, WW,, bb == modelmodel((X_trainX_train,, Y_trainY_train,, word_to_vec_mapword_to_ )
+    print(pred)
