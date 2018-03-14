@@ -74,3 +74,15 @@ def complete_analogy(word_a, word_b, word_c, word_to_vec_map):
     Returns:
     best_word --  the word such that v_b - v_a is close to v_best_word - v_c, as measured by cosine similarity
     """
+
+    # convert words to lower case
+    word_a, word_b, word_c = word_a.lower(), word_b.lower(), word_c.lower()
+
+    ### START CODE HERE ###
+    # Get the word embeddings v_a, v_b and v_c (≈1-3 lines)
+    e_a, e_b, e_c = word_to_vec_map[word_a], word_to_vec_map[word_b], word_to_vec_map[word_c]
+    ### END CODE HERE ###
+
+    words = word_to_vec_map.keys()
+    max_cosine_sim = -100  # Initialize max_cosine_sim to a large negative number
+    best_word = None  # Initialize best_word with None, it will help keep track of the word to output
