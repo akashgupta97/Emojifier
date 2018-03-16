@@ -301,3 +301,8 @@ Accuracy: 0.969696969697
  [ 0.]
  [ 2.]]
     '''
+
+    print("Training set:")
+    pred_train = predict(X_train, Y_train, W, b, word_to_vec_map)
+    print('Test set:')
+    pred_test = predict(X_test, Y_test, W, b, word_to_vec_map)
