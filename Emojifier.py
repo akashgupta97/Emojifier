@@ -306,3 +306,10 @@ Accuracy: 0.969696969697
     pred_train = predict(X_train, Y_train, W, b, word_to_vec_map)
     print('Test set:')
     pred_test = predict(X_test, Y_test, W, b, word_to_vec_map)
+
+    X_my_sentencesX_my_sen = np.array(
+        ["i adore you", "i love you", "funny lol", "lets play with a ball", "food is ready", "not feeling happy"])
+    Y_my_labels = np.array([[0], [0], [2], [1], [4], [3]])
+
+    pred = predict(X_my_sentences, Y_my_labels, W, b, word_to_vec_map)
+    print_predictions(X_my_sentences, pred)
