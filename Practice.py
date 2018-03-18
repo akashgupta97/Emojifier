@@ -96,3 +96,12 @@ def complete_analogy(word_a, word_b, word_c, word_to_vec_map):
         ### START CODE HERE ###
         # Compute cosine similarity between the vector (e_b - e_a) and the vector ((w's vector representation) - e_c)  (≈1 line)
         cosine_sim = cosine_similarity((e_b - e_a), (word_to_vec_map[w] - e_c))
+
+        # If the cosine_sim is more than the max_cosine_sim seen so far,
+        # then: set the new max_cosine_sim to the current cosine_sim and the best_word to the current word (≈3 lines)
+        if cosine_sim > max_cosine_sim:
+            max_cosine_sim = cosine_sim
+            best_word = w
+            ### END CODE HERE ###
+
+    return best_word
