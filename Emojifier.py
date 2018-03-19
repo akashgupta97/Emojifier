@@ -313,3 +313,19 @@ Accuracy: 0.969696969697
 
     pred = predict(X_my_sentences, Y_my_labels, W, b, word_to_vec_map)
     print_predictions(X_my_sentences, pred)
+
+
+
+    '''
+    Accuracy: 0.833333333333
+
+i adore you ❤️
+i love you ❤️
+funny lol 😄
+lets play with a ball ⚾
+food is ready 🍴
+not feeling happy 😄
+    '''
+
+
+    
