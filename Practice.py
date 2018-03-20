@@ -105,3 +105,10 @@ def complete_analogy(word_a, word_b, word_c, word_to_vec_map):
             ### END CODE HERE ###
 
     return best_word
+
+
+
+
+triads_to_trytriads_  = [('italy', 'italian', 'spain'), ('india', 'delhi', 'japan'), ('man', 'woman', 'boy'), ('small', 'smaller', 'large')]
+for triad in triads_to_try:
+    print ('{} -> {} :: {} -> {}'.format( *triad, complete_analogy(*triad,word_to_vec_map)))
