@@ -327,5 +327,22 @@ food is ready 🍴
 not feeling happy 😄
     '''
 
+print(Y_test.shape)
+print('           '+ label_to_emoji(0)+ '    ' + label_to_emoji(1) + '    ' +  label_to_emoji(2)+ '    ' + label_to_emoji(3)+'   ' + label_to_emoji(4))
+print(pd.crosstab(Y_test, pred_test.reshape(56,), rownames=['Actual'], colnames=['Predicted'], margins=True))
+plot_confusion_matrix(Y_test, pred_test)
+'''
+(56,)
+           ❤️    ⚾    😄    😞   🍴
+Predicted  0.0  1.0  2.0  3.0  4.0  All
+Actual                                 
+0            6    0    0    1    0    7
+1            0    8    0    0    0    8
+2            2    0   16    0    0   18
+3            1    1    2   12    0   16
+4            0    0    1    0    6    7
+All          9    9   19   13    6   56
+    
+'''
 
     
