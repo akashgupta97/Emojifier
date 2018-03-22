@@ -112,3 +112,11 @@ def complete_analogy(word_a, word_b, word_c, word_to_vec_map):
 triads_to_trytriads_  = [('italy', 'italian', 'spain'), ('india', 'delhi', 'japan'), ('man', 'woman', 'boy'), ('small', 'smaller', 'large')]
 for triad in triads_to_try:
     print ('{} -> {} :: {} -> {}'.format( *triad, complete_analogy(*triad,word_to_vec_map)))
+
+
+    '''
+    italy -> italian :: spain -> spanish
+india -> delhi :: japan -> tokyo
+man -> woman :: boy -> girl
+small -> smaller :: large -> larger
+    '''
