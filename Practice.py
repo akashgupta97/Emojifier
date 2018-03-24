@@ -120,3 +120,6 @@ india -> delhi :: japan -> tokyo
 man -> woman :: boy -> girl
 small -> smaller :: large -> larger
     '''
+
+    g = word_to_vec_map['woman'] - word_to_vec_map['man']
+    print(g)
