@@ -123,3 +123,11 @@ small -> smaller :: large -> larger
 
     g = word_to_vec_map['woman'] - word_to_vec_map['man']
     print(g)
+
+    print('List of names and their similarities with constructed vector:')
+
+    # girls and boys name
+    name_list = ['john', 'marie', 'sophie', 'ronaldo', 'priya', 'rahul', 'danielle', 'reza', 'katy', 'yasmin']
+
+    for w in name_list:
+        print(w, cosine_similarity(word_to_vec_map[w], g))
