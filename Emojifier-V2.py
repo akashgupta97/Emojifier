@@ -37,3 +37,14 @@ def sentences_to_indices(X, word_to_index, max_len):
 
         # Initialize j to 0
         j = 0
+
+        # Loop over the words of sentence_words
+        for w in sentence_words:
+            # Set the (i,j)th entry of X_indices to the index of the correct word.
+            X_indices[i, j] = word_to_index[w]
+            # Increment j to j + 1
+            j = j + 1
+
+            ### END CODE HERE ###
+
+    return X_indices
