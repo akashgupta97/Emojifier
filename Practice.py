@@ -131,3 +131,9 @@ small -> smaller :: large -> larger
 
     for w in name_list:
         print(w, cosine_similarity(word_to_vec_map[w], g))
+
+        print('Other words and their similarities:')
+        word_list = ['lipstick', 'guns', 'science', 'arts', 'literature', 'warrior', 'doctor', 'tree', 'receptionist',
+                     'technology', 'fashion', 'teacher', 'engineer', 'pilot', 'computer', 'singer']
+        for w in word_list:
+            print(w, cosine_similarity(word_to_vec_map[w], g))
