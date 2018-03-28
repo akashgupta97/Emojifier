@@ -48,3 +48,9 @@ def sentences_to_indices(X, word_to_index, max_len):
             ### END CODE HERE ###
 
     return X_indices
+
+
+X1 = np.array(["funny lol", "lets play baseball", "food is ready for you"])
+X1_indices = sentences_to_indices(X1,word_to_index, max_len = 5)
+print("X1 =", X1)
+print("X1_indices =", X1_indices)
