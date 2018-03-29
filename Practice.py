@@ -137,3 +137,18 @@ small -> smaller :: large -> larger
                      'technology', 'fashion', 'teacher', 'engineer', 'pilot', 'computer', 'singer']
         for w in word_list:
             print(w, cosine_similarity(word_to_vec_map[w], g))
+
+
+            def neutralize(word, g, word_to_vec_map):
+                """
+                Removes the bias of "word" by projecting it on the space orthogonal to the bias axis.
+                This function ensures that gender neutral words are zero in the gender subspace.
+
+                Arguments:
+                    word -- string indicating the word to debias
+                    g -- numpy-array of shape (50,), corresponding to the bias axis (such as gender)
+                    word_to_vec_map -- dictionary mapping words to their corresponding vectors.
+
+                Returns:
+                    e_debiased -- neutralized word vector representation of the input "word"
+                """
