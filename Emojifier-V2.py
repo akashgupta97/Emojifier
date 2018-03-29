@@ -54,3 +54,10 @@ X1 = np.array(["funny lol", "lets play baseball", "food is ready for you"])
 X1_indices = sentences_to_indices(X1,word_to_index, max_len = 5)
 print("X1 =", X1)
 print("X1_indices =", X1_indices)
+
+'''
+X1 = ['funny lol' 'lets play baseball' 'food is ready for you']
+X1_indices = [[ 155345.  225122.       0.       0.       0.]
+ [ 220930.  286375.   69714.       0.       0.]
+ [ 151204.  192973.  302254.  151349.  394475.]]
+'''
