@@ -139,16 +139,31 @@ small -> smaller :: large -> larger
             print(w, cosine_similarity(word_to_vec_map[w], g))
 
 
-            def neutralize(word, g, word_to_vec_map):
-                """
-                Removes the bias of "word" by projecting it on the space orthogonal to the bias axis.
-                This function ensures that gender neutral words are zero in the gender subspace.
+    def neutralize(word, g, word_to_vec_map):
+         """
+        Removes the bias of "word" by projecting it on the space orthogonal to the bias axis.
+       This function ensures that gender neutral words are zero in the gender subspace.
 
-                Arguments:
-                    word -- string indicating the word to debias
-                    g -- numpy-array of shape (50,), corresponding to the bias axis (such as gender)
-                    word_to_vec_map -- dictionary mapping words to their corresponding vectors.
+      Arguments:
+        word -- string indicating the word to debias
+        g -- numpy-array of shape (50,), corresponding to the bias axis (such as gender)
+        word_to_vec_map -- dictionary mapping words to their corresponding vectors.
 
-                Returns:
-                    e_debiased -- neutralized word vector representation of the input "word"
-                """
+      Returns:
+        e_debiased -- neutralized word vector representation of the input "word"
+        """
+
+        ### START CODE HERE ###
+        # Select word vector representation of "word". Use word_to_vec_map. (≈ 1 line)
+        e = None
+
+        # Compute e_biascomponent using the formula give above. (≈ 1 line)
+        e_biascomponent = None
+
+        # Neutralize e by substracting e_biascomponent from it
+        # e_debiased should be equal to its orthogonal projection. (≈ 1 line)
+        e_debiased = None
+        ### END CODE HERE ###
+
+        return e_debiased
+
