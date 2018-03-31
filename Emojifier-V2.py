@@ -61,3 +61,21 @@ X1_indices = [[ 155345.  225122.       0.       0.       0.]
  [ 220930.  286375.   69714.       0.       0.]
  [ 151204.  192973.  302254.  151349.  394475.]]
 '''
+
+
+# GRADED FUNCTION: pretrained_embedding_layer
+
+def pretrained_embedding_layer(word_to_vec_map, word_to_index):
+    """
+    Creates a Keras Embedding() layer and loads in pre-trained GloVe 50-dimensional vectors.
+
+    Arguments:
+    word_to_vec_map -- dictionary mapping words to their GloVe vector representation.
+    word_to_index -- dictionary mapping from words to their indices in the vocabulary (400,001 words)
+
+    Returns:
+    embedding_layer -- pretrained layer Keras instance
+    """
+
+    vocab_len = len(word_to_index) + 1  # adding 1 to fit Keras embedding (requirement)
+    emb_dim = word_to_vec_map["cucumber"].shape[0]  # define dimensionality of your GloVe word vectors (= 50)
