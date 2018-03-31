@@ -167,3 +167,9 @@ small -> smaller :: large -> larger
 
         return e_debiased
 
+
+e = "receptionist"
+print("cosine similarity between " + e + " and g, before neutralizing: ", cosine_similarity(word_to_vec_map["receptionist"], g))
+
+e_debiased = neutralize("receptionist", g, word_to_vec_map)
+print("cosine similarity between " + e + " and g, after neutralizing: ", cosine_similarity(e_debiased, g))
