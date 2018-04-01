@@ -173,3 +173,17 @@ print("cosine similarity between " + e + " and g, before neutralizing: ", cosine
 
 e_debiased = neutralize("receptionist", g, word_to_vec_map)
 print("cosine similarity between " + e + " and g, after neutralizing: ", cosine_similarity(e_debiased, g))
+
+def equalize(pair, bias_axis, word_to_vec_map):
+"""
+Debias gender specific words by following the equalize method described in the figure above.
+
+Arguments:
+pair -- pair of strings of gender specific words to debias, e.g. ("actress", "actor")
+bias_axis -- numpy-array of shape (50,), vector corresponding to the bias axis, e.g. gender
+word_to_vec_map -- dictionary mapping words to their corresponding vectors
+
+Returns
+e_1 -- word vector corresponding to the first word
+e_2 -- word vector corresponding to the second word
+"""
