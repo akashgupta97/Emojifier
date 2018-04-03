@@ -187,3 +187,19 @@ Returns
 e_1 -- word vector corresponding to the first word
 e_2 -- word vector corresponding to the second word
 """
+
+### START CODE HERE ###
+# Step 1: Select word vector representation of "word". Use word_to_vec_map. (≈ 2 lines)
+w1, w2 = None
+e_w1, e_w2 = None
+
+# Step 2: Compute the mean of e_w1 and e_w2 (≈ 1 line)
+mu = None
+
+# Step 3: Compute the projections of mu over the bias axis and the orthogonal axis (≈ 2 lines)
+mu_B = None
+mu_orth = None
+
+# Step 4: Use equations (7) and (8) to compute e_w1B and e_w2B (≈2 lines)
+e_w1B = None
+e_w2B = None
