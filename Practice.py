@@ -203,3 +203,15 @@ mu_orth = None
 # Step 4: Use equations (7) and (8) to compute e_w1B and e_w2B (≈2 lines)
 e_w1B = None
 e_w2B = None
+
+# Step 5: Adjust the Bias part of e_w1B and e_w2B using the formulas (9) and (10) given above (≈2 lines)
+corrected_e_w1B = None
+corrected_e_w2B = None
+
+# Step 6: Debias by equalizing e1 and e2 to the sum of their corrected projections (≈2 lines)
+e1 = None
+e2 = None
+
+### END CODE HERE ###
+
+return e1, e2
