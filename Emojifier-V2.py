@@ -101,3 +101,11 @@ def pretrained_embedding_layer(word_to_vec_map, word_to_index):
     embedding_layer.set_weights([emb_matrix])
 
     return embedding_layer
+
+embedding_layer = pretrained_embedding_layer(word_to_vec_map, word_to_index)
+print("weights[0][1][3] =", embedding_layer.get_weights()[0][1][3])
+
+'''
+weights[0][1][3] = -0.3403
+'''
+
