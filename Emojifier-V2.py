@@ -109,3 +109,19 @@ print("weights[0][1][3] =", embedding_layer.get_weights()[0][1][3])
 weights[0][1][3] = -0.3403
 '''
 
+
+# GRADED FUNCTION: Emojify_V2
+
+def Emojify_V2(input_shape, word_to_vec_map, word_to_index):
+    """
+    Function creating the Emojify-v2 model's graph.
+
+    Arguments:
+    input_shape -- shape of the input, usually (max_len,)
+    word_to_vec_map -- dictionary mapping every word in a vocabulary into its 50-dimensional vector representation
+    word_to_index -- dictionary mapping from words to their indices in the vocabulary (400,001 words)
+
+    Returns:
+    model -- a model instance in Keras
+    """
+
