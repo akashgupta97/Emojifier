@@ -125,3 +125,24 @@ def Emojify_V2(input_shape, word_to_vec_map, word_to_index):
     model -- a model instance in Keras
     """
 
+    ### START CODE HERE ###
+    # Define sentence_indices as the input of the graph, it should be of shape input_shape and dtype 'int32' (as it contains indices).
+    sentence_indices = Input(shape=input_shape, dtype=np.int32)
+
+    # Create the embedding layer pretrained with GloVe Vectors (≈1 line)
+    embedding_layer = pretrained_embedding_layer(word_to_vec_map, word_to_index)
+
+    # Propagate sentence_indices through your embedding layer, you get back the embeddings
+    embeddings = embedding_layer(sentence_indices)
+
+    # Propagate the embeddings through an LSTM layer with 128-dimensional hidden state
+    # Be careful, the returned output should be a batch of sequences.
+    X = LSTM(128, return_sequences=True)(embeddings)
+    # Add dropout with a probability of 0.5
+    X = Dropout(0.5)(X)
+    # Propagate X trough another LSTM layer with 128-dimensional hidden state
+    # Be careful, the returned output should be a single hidden state, not a batch of sequences.
+    X = LSTM(128)(X)
+    # Add dropout with a probability of 0.5
+    X = Dropout(0.5)(X)
+    # Propagate X through a Dense layer with softmax activation to get back a batch of 5-dimensional vectors.
