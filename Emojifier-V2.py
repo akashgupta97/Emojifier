@@ -146,3 +146,15 @@ def Emojify_V2(input_shape, word_to_vec_map, word_to_index):
     # Add dropout with a probability of 0.5
     X = Dropout(0.5)(X)
     # Propagate X through a Dense layer with softmax activation to get back a batch of 5-dimensional vectors.
+
+
+    X = Dense(5, activation='softmax')(X)
+    # Add a softmax activation
+    X = Activation('softmax')(X)
+
+    # Create Model instance which converts sentence_indices into X.
+    model = Model(sentence_indices, X)
+
+    ### END CODE HERE ###
+
+    return model
