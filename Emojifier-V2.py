@@ -189,3 +189,6 @@ Trainable params: 20,223,927
 Non-trainable params: 0
 _________________________________________________________________
 '''
+
+
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
