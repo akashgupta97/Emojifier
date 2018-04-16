@@ -196,3 +196,6 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 
 X_train_indices = sentences_to_indices(X_train, word_to_index, maxLen)
 Y_train_oh = convert_to_one_hot(Y_train, C = 5)
+
+
+model.fit(X_train_indices, Y_train_oh, epochs = 50, batch_size = 32, shuffle=True)
