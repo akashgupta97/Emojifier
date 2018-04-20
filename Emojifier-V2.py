@@ -304,3 +304,9 @@ Epoch 49/50
 Epoch 50/50
 132/132 [==============================] - 2s - loss: 0.9129 - acc: 0.9924     
 '''
+
+X_test_indices = sentences_to_indices(X_test, word_to_index, max_len = maxLen)
+Y_test_oh = convert_to_one_hot(Y_test, C = 5)
+loss, acc = model.evaluate(X_test_indices, Y_test_oh)
+print()
+print("Test accuracy = ", acc)
