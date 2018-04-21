@@ -310,3 +310,10 @@ Y_test_oh = convert_to_one_hot(Y_test, C = 5)
 loss, acc = model.evaluate(X_test_indices, Y_test_oh)
 print()
 print("Test accuracy = ", acc)
+
+
+'''
+
+32/56 [================>.............] - ETA: 0s
+Test accuracy =  0.785714294229
+'''
