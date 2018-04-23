@@ -317,3 +317,15 @@ print("Test accuracy = ", acc)
 32/56 [================>.............] - ETA: 0s
 Test accuracy =  0.785714294229
 '''
+
+
+# This code allows you to see the mislabelled examples
+C = 5
+y_test_oh = np.eye(C)[Y_test.reshape(-1)]
+X_test_indices = sentences_to_indices(X_test, word_to_index, maxLen)
+pred = model.predict(X_test_indices)
+for i in range(len(X_test)):
+    x = X_test_indices
+    num = np.argmax(pred[i])
+    if(num != Y_test[i]):
+        print('Expected emoji:'+ label_to_emoji(Y_test[i]) + ' prediction: '+ X_test[i] + label_to_emoji(num).strip())
