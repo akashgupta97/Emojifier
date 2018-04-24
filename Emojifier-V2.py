@@ -329,3 +329,19 @@ for i in range(len(X_test)):
     num = np.argmax(pred[i])
     if(num != Y_test[i]):
         print('Expected emoji:'+ label_to_emoji(Y_test[i]) + ' prediction: '+ X_test[i] + label_to_emoji(num).strip())
+
+
+'''
+Expected emoji:😞 prediction: I am upset	⚾
+Expected emoji:😞 prediction: work is hard	😄
+Expected emoji:😞 prediction: work is horrible	😄
+Expected emoji:🍴 prediction: any suggestions for dinner	😄
+Expected emoji:😄 prediction: you brighten my day	😞
+Expected emoji:😞 prediction: she is a bully	❤️
+Expected emoji:😞 prediction: I am upset	⚾
+Expected emoji:😞 prediction: My life is so boring	❤️
+Expected emoji:😄 prediction: will you be my valentine	❤️
+Expected emoji:😞 prediction: go away	⚾
+Expected emoji:😞 prediction: yesterday we lost again	⚾
+Expected emoji:🍴 prediction: I did not have breakfast 😄
+'''
