@@ -345,3 +345,15 @@ Expected emoji:😞 prediction: go away	⚾
 Expected emoji:😞 prediction: yesterday we lost again	⚾
 Expected emoji:🍴 prediction: I did not have breakfast 😄
 '''
+
+
+# Change the sentence below to see your prediction. Make sure all the words are in the Glove embeddings.
+x_test = np.array(['not feeling happy'])
+X_test_indices = sentences_to_indices(x_test, word_to_index, maxLen)
+print(x_test[0] +' '+  label_to_emoji(np.argmax(model.predict(X_test_indices))))
+
+
+'''
+not feeling happy ❤️
+
+'''
